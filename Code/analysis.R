@@ -5,7 +5,7 @@ library(msm)
 library(sandwich)
 library(stargazer)
 
-df <- read_xlsx('C:/Users/demet/Desktop/project/poverty_brazil.xlsx')
+df <- read_xlsx('data/poverty_brazil.xlsx')
 
 # 1 - female 0 - male
 # 1 - was poor in 2020 interview 0 - not poor in 2020 interview
@@ -190,6 +190,7 @@ ggplot(newdata, aes(education, Prob, group = woman)) +
   ggtitle("Predicted Probability of Poverty by Education and Gender") +
   theme_classic()
   
+
 
 
 
