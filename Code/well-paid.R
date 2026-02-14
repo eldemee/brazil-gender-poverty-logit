@@ -2,7 +2,7 @@ library(tidyverse)
 library(ggplot2)
 
 #DF MODIFY
-df <- readRDS('C:/Users/demet/Desktop/project/enade_2008_2018.rds')
+df <- readRDS('data/enade_2008_2018.rds')
 
 df$TP_SEXO <- ifelse(df$TP_SEXO == 'M', 'Men', 'Women')
 uni <- c("Universidade", "Universidade Especializada", "Centro Universitario")
@@ -40,3 +40,4 @@ ggplot(df_plot, aes(Sex, Proportion, fill=WellPaid)) +
   labs(y = "Proportion", x = "Sex", fill = "Well paid") +
   ggtitle('Proportion of students enrolled in a well-paid career by gender') +
   theme_classic()
+
